@@ -1,0 +1,24 @@
+CACHE MANIFEST
+viewer.html
+viewer.css
+../as.pdf
+../build/pdf.js
+viewer.js
+jquery-3.6.0.min.js
+as.js
+locale/locale.properties
+locale/en-US/viewer.properties
+../build/pdf.worker.js
+images/loading-icon.gif
+images/loading.svg
+images/toolbarButton-viewThumbnail.svg
+images/toolbarButton-viewOutline.svg
+images/toolbarButton-viewAttachments.svg
+images/toolbarButton-viewLayers.svg
+images/toolbarButton-pageUp.svg
+images/toolbarButton-pageDown.svg
+images/toolbarButton-presentationMode.svg
+images/toolbarButton-openFile.svg
+images/toolbarButton-print.svg
+images/toolbarButton-download.svg
+images/toolbarButton-menuArrow.svg
