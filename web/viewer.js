@@ -138,7 +138,7 @@ const defaultOptions = {
     kind: OptionKind.VIEWER + OptionKind.PREFERENCE
   },
   useOnlyCssZoom: {
-    value: false,
+    value: true,
     kind: OptionKind.VIEWER + OptionKind.PREFERENCE
   },
   viewerCssTheme: {
@@ -450,8 +450,8 @@ class DefaultExternalServices {
 
   static get supportedMouseWheelZoomModifierKeys() {
     return (0, _pdfjsLib.shadow)(this, "supportedMouseWheelZoomModifierKeys", {
-      ctrlKey: true,
-      metaKey: true
+      ctrlKey: false,
+      metaKey: false
     });
   }
 
@@ -11487,7 +11487,7 @@ class PDFPageView {
     this.textLayerMode = Number.isInteger(options.textLayerMode) ? options.textLayerMode : _ui_utils.TextLayerMode.ENABLE;
     this.imageResourcesPath = options.imageResourcesPath || "";
     this.renderInteractiveForms = options.renderInteractiveForms !== false;
-    this.useOnlyCssZoom = options.useOnlyCssZoom || false;
+    this.useOnlyCssZoom = options.useOnlyCssZoom || true;
     this.maxCanvasPixels = options.maxCanvasPixels || MAX_CANVAS_PIXELS;
     this.eventBus = options.eventBus;
     this.renderingQueue = options.renderingQueue;

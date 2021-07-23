@@ -15,6 +15,10 @@ $(document).ready(function() {
         }
     }    
     u.css('display','none');
+
+    if (isiOS()) {
+        $('body').addClass("ios");
+    }
 });
 
 var stats = {};
@@ -79,4 +83,8 @@ function clearAsSelected() {
 
 function getkey(target) {
     return $(target).attr('data-page')+"_"+$(target).attr('data-offset');
+}
+
+function isiOS() {
+    return !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 }
