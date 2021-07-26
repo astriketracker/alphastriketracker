@@ -37,11 +37,19 @@ function setProp(type, value) {
     statLine.html(s);
 }
 
+function updateDescription() {
+    window.event.stopPropagation();
+    var value = $("#asform .asSpaForm").val();
+    stats[currentKey]['Spa'] = value;    
+    $("#as"+currentKey+" .asSpa").html(value);
+}
+
 function closeForm() {
     window.event.stopPropagation();
     window.event.preventDefault();
     $('#asform').css('display','none');
     clearAsSelected();
+    $("#asform .asSpaForm").val("");
 }
 
 function handleClick(ev) {
@@ -73,6 +81,7 @@ function handleClick(ev) {
             "FC":0,            
             "MP":0,
             "Weapons":0,
+            "Spa":"",
         }
     }
 }
